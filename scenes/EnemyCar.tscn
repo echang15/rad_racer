@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d8jkm6y7x4q3"]
+
+[ext_resource type="Texture2D" uid="uid://b3bufwt83di6y" path="res://assets/sprites/car_enemy civic_v2.png" id="1_tex"]
+[ext_resource type="Script" uid="uid://bydhvel6fvw3u" path="res://scripts/EnemyCar.gd" id="2_script"]
+
+[node name="EnemyCar" type="Sprite3D" unique_id=1333265830]
+billboard = 1
+texture = ExtResource("1_tex")
+script = ExtResource("2_script")

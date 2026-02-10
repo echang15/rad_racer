@@ -1,0 +1,12 @@
+res://scripts/RoadManager.gd
+res://scripts/EnemyCar.gd
+res://scripts/PlayerCar.gd
+res://scenes/Puddle.tscn
+res://scenes/Game.tscn
+res://assets/shaders/bg_scroll.gdshader
+res://scripts/UI.gd
+res://scenes/EnemyCar.tscn
+res://scripts/Puddle.gd
+res://scenes/UI.tscn
+res://scenes/StartScreen.tscn
+res://scenes/HighScores.tscn

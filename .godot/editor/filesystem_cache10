@@ -1,0 +1,37 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1770678018
+export_presets.cfg::TextFile::-1::1770670360::0::1::::<><><>0<>0<><>::
+::res://assets/::1770678018
+::res://assets/shaders/::1770561609
+bg_scroll.gdshader::Shader::1153899090154334976::1770561609::0::1::::<><><>0<>0<><>::
+retro_road.gdshader::Shader::4600649068405342279::1770558797::0::1::::<><><>0<>0<><>::
+::res://assets/sprites/::1770678038
+background_sky.png::CompressedTexture2D::3168519431893558936::1770559800::1770564181::1::::<><><>0<>0<>1fc55296e908ba51057440a3ca016003<>res://.godot/imported/background_sky.png-b0305d868b806f0d7cf2dfac09fb5886.ctex::
+background_sky_tall.png::CompressedTexture2D::1752192243384458267::1770583511::1770583673::0::::<><><>0<>0<>84dfa52f638b22e9ad0d09dc5a87a903<>::
+car_enemy civic_v2.png::CompressedTexture2D::4354997138538823054::1770671262::1770671265::1::::<><><>0<>0<>4c1cbff0315f014890133e40312c3697<>res://.godot/imported/car_enemy civic_v2.png-12365447df16b7d40fba25036fcc3c6b.s3tc.ctex::
+car_enemy.png::CompressedTexture2D::7505949848179584092::1770584090::1770584207::1::::<><><>0<>0<>4201605bd7381363cc59774b4e1b6c86<>res://.godot/imported/car_enemy.png-c90b0c102a135c493e46ab8459917f60.s3tc.ctex::
+car_player.png::CompressedTexture2D::335616671269728232::1770564915::1770564944::1::::<><><>0<>0<>7953159573919e5a53ab92264c296a21<>res://.godot/imported/car_player.png-c6f5d75703b8f9bf6864d4102a0971ff.s3tc.ctex::
+car_player_side.png::CompressedTexture2D::4153751754715033577::1770670524::1770670539::1::::<><><>0<>0<>f815df6fa2671856bf3decd30ea066f4<>res://.godot/imported/car_player_side.png-0f24aad3f9ae83cbd2407d0632ed2936.ctex::
+mountain_bg.png::CompressedTexture2D::7203599439329739238::1770676590::1770676591::1::::<><><>0<>0<>c66201c859101f805d708f9033dd7549<>res://.godot/imported/mountain_bg.png-96fa0ba56b9563912330f02797fb4ccf.ctex::
+puddle.png::CompressedTexture2D::580972530638130340::1770561510::1770564181::1::::<><><>0<>0<>9e5c1e7431abf4df44e7eb1eb1573793<>res://.godot/imported/puddle.png-ff353cb8b9d6def2a62ddec9f544591c.ctex::
+puddle_blue.png::CompressedTexture2D::1928034832959861749::1770669854::1770669948::1::::<><><>0<>0<>a45ecc09a20cc4f0282b04f08146b995<>res://.godot/imported/puddle_blue.png-c90e1a68dfb5dccc50d2d77e6ee4cb57.s3tc.ctex::
+road_texture.png::CompressedTexture2D::1914553022423254577::1770559663::1770564181::1::::<><><>0<>0<>3567e20435c91c865df265ada11cf0fd<>res://.godot/imported/road_texture.png-b31d6773d8c616ed3b28f1a22fac0a9e.s3tc.ctex::
+sky_bg.png::CompressedTexture2D::4250794628518244131::1770583787::1770583826::1::::<><><>0<>0<>5a9d20bb8e2df53857cd8463b06dfba2<>res://.godot/imported/sky_bg.png-ede526c7c98763f70c399f16f7b5731f.ctex::
+sky_day.png::CompressedTexture2D::7197344172333368747::1770677986::1770678040::1::::<><><>0<>0<>8d9a562ebea5367e4d34510f45c10c09<>res://.godot/imported/sky_day.png-93e0b530fdba968d037406cf392deba7.ctex::
+sky_sunset.png::CompressedTexture2D::8997767770828789470::1770678021::1770678040::1::::<><><>0<>0<>7ccf12d635ed3fcc1745af8eff79f8f5<>res://.godot/imported/sky_sunset.png-c7fc2739006003d6d0a44f8ed3fb1c09.ctex::
+::res://scenes/::1770677309
+EnemyCar.tscn::PackedScene::279255986975306536::1770671685::0::1::::<><><>0<>0<><>::uid://b3bufwt83di6y::::res://assets/sprites/car_enemy civic_v2.png<>uid://bydhvel6fvw3u::::res://scripts/EnemyCar.gd
+Game.tscn::PackedScene::138878299699241766::1770677308::0::1::::<><><>0<>0<><>::uid://k2tlxitengjv::::res://scripts/RoadManager.gd<>uid://b6suau2hhsae6::::res://assets/shaders/retro_road.gdshader<>uid://2jon5ka6jq3b::::res://assets/sprites/road_texture.png<>uid://e1ts7ru6es3y::::res://assets/sprites/car_player.png<>uid://up24th7qy0k2::::res://scripts/PlayerCar.gd<>uid://qo7sxeyrsqey::::res://assets/shaders/bg_scroll.gdshader<>uid://bqa51amsoba8g::::res://scenes/UI.tscn<>uid://d8jkm6y7x4q3::::res://scenes/EnemyCar.tscn<>uid://e8jkm6y7x4q4::::res://scenes/Puddle.tscn<>uid://b1td74iv2coal::::res://assets/sprites/sky_bg.png<>uid://davqh3h8fcqks::::res://assets/sprites/mountain_bg.png
+HighScores.tscn::PackedScene::3793964825240243540::1770677023::0::1::::<><><>0<>0<><>::uid://cnao7j7uj7n17::::res://scripts/HighScores.gd
+Puddle.tscn::PackedScene::349444830613338921::1770669980::0::1::::<><><>0<>0<><>::uid://2p7pmr1qkp0x::::res://assets/sprites/puddle_blue.png<>uid://bv850brp8pmws::::res://scripts/Puddle.gd
+StartScreen.tscn::PackedScene::4064026190056617125::1770676982::0::1::::<><><>0<>0<><>::uid://b47g7ilnl8kdj::::res://scripts/StartScreen.gd
+UI.tscn::PackedScene::3511310141700380176::1770677284::0::1::::<><><>0<>0<><>::uid://dsa2oyi7x7kw5::::res://scripts/UI.gd
+::res://scripts/::1770677608
+EnemyCar.gd::GDScript::4077608813391706428::1770671653::0::1::::<>Sprite3D<><>0<>0<><>::
+HighScores.gd::GDScript::5686204041050212056::1770676743::0::1::::<>Control<><>0<>0<><>::
+PlayerCar.gd::GDScript::1436434696133051987::1770670973::0::1::::<>Sprite3D<><>0<>0<><>::
+Puddle.gd::GDScript::3930377100117629910::1770671685::0::1::::<>Sprite3D<><>0<>0<><>::
+RoadManager.gd::GDScript::758801123600079719::1770677607::0::1::::<>Node3D<><>0<>0<><>::
+ScoreManager.gd::GDScript::3594730772685526320::1770676727::0::1::::<>Node<><>0<>0<><>::
+StartScreen.gd::GDScript::4488379122473827119::1770676758::0::1::::<>Control<><>0<>0<><>::
+UI.gd::GDScript::8424326870888027298::1770677282::0::1::::<>CanvasLayer<><>0<>0<><>::

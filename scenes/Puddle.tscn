@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://e8jkm6y7x4q4"]
+
+[ext_resource type="Texture2D" uid="uid://2p7pmr1qkp0x" path="res://assets/sprites/puddle_blue.png" id="1_tex"]
+[ext_resource type="Script" uid="uid://bv850brp8pmws" path="res://scripts/Puddle.gd" id="2_script"]
+
+[node name="Puddle" type="Sprite3D" unique_id=1933034344]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+billboard = 1
+texture = ExtResource("1_tex")
+script = ExtResource("2_script")

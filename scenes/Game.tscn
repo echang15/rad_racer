@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://b8jkm6y7x4q1"]
+
+[ext_resource type="Script" uid="uid://k2tlxitengjv" path="res://scripts/RoadManager.gd" id="1_roadcheck"]
+[ext_resource type="Shader" uid="uid://b6suau2hhsae6" path="res://assets/shaders/retro_road.gdshader" id="2_shader"]
+[ext_resource type="Texture2D" uid="uid://2jon5ka6jq3b" path="res://assets/sprites/road_texture.png" id="3_tex"]
+[ext_resource type="Texture2D" uid="uid://e1ts7ru6es3y" path="res://assets/sprites/car_player.png" id="4_car"]
+[ext_resource type="Script" uid="uid://up24th7qy0k2" path="res://scripts/PlayerCar.gd" id="5_player"]
+[ext_resource type="Shader" uid="uid://qo7sxeyrsqey" path="res://assets/shaders/bg_scroll.gdshader" id="7_bgshader"]
+[ext_resource type="PackedScene" uid="uid://bqa51amsoba8g" path="res://scenes/UI.tscn" id="8_ui"]
+[ext_resource type="PackedScene" uid="uid://d8jkm6y7x4q3" path="res://scenes/EnemyCar.tscn" id="9_enemy"]
+[ext_resource type="PackedScene" uid="uid://e8jkm6y7x4q4" path="res://scenes/Puddle.tscn" id="10_puddle"]
+[ext_resource type="Texture2D" uid="uid://b1td74iv2coal" path="res://assets/sprites/sky_bg.png" id="10_qy1jj"]
+[ext_resource type="Texture2D" uid="uid://davqh3h8fcqks" path="res://assets/sprites/mountain_bg.png" id="11_mnt"]
+
+[sub_resource type="Environment" id="Environment_game"]
+background_mode = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_road"]
+render_priority = 0
+shader = ExtResource("2_shader")
+shader_parameter/speed = 0.0
+shader_parameter/curve_strength = 0.0
+shader_parameter/road_texture = ExtResource("3_tex")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_road"]
+material = SubResource("ShaderMaterial_road")
+size = Vector2(20, 100)
+subdivide_width = 20
+subdivide_depth = 100
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bg"]
+shader = ExtResource("7_bgshader")
+shader_parameter/scroll_speed = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mnt"]
+shader = ExtResource("7_bgshader")
+shader_parameter/scroll_speed = 0.0
+
+[node name="Game" type="Node3D" unique_id=943981609 node_paths=PackedStringArray("road_mesh", "background_rect", "mountain_rect", "camera")]
+script = ExtResource("1_roadcheck")
+road_mesh = NodePath("Road")
+background_rect = NodePath("BackgroundLoop/Sky")
+mountain_rect = NodePath("BackgroundLoop/Mountain")
+camera = NodePath("Camera3D")
+enemy_scene = ExtResource("9_enemy")
+puddle_scene = ExtResource("10_puddle")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=213830028]
+environment = SubResource("Environment_game")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=668758229]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 10, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=638150563]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 3, 5)
+
+[node name="Road" type="MeshInstance3D" parent="." unique_id=1805087953]
+mesh = SubResource("PlaneMesh_road")
+
+[node name="Player" type="Sprite3D" parent="." unique_id=2128732258 node_paths=PackedStringArray("road_manager")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1, 3)
+billboard = 1
+texture = ExtResource("4_car")
+script = ExtResource("5_player")
+road_manager = NodePath("..")
+
+[node name="UI" parent="." unique_id=357828329 instance=ExtResource("8_ui")]
+
+[node name="BackgroundLoop" type="CanvasLayer" parent="." unique_id=625477771]
+layer = -1
+
+[node name="Sky" type="TextureRect" parent="BackgroundLoop" unique_id=761346729]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_bg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_qy1jj")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="Mountain" type="TextureRect" parent="BackgroundLoop" unique_id=982347123]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_mnt")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 70.0
+offset_right = 417.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_mnt")
+stretch_mode = 2

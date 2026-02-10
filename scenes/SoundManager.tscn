@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://soundmanager123"]
+
+[ext_resource type="Script" path="res://scripts/SoundManager.gd" id="1_sound"]
+
+[node name="SoundManager" type="Node" node_paths=PackedStringArray("turbo_sfx", "pass_sfx", "puddle_sfx", "crash_sfx")]
+script = ExtResource("1_sound")
+turbo_sfx = NodePath("TurboSFX")
+pass_sfx = NodePath("PassSFX")
+puddle_sfx = NodePath("PuddleSFX")
+crash_sfx = NodePath("CrashSFX")
+
+[node name="TurboSFX" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+
+[node name="PassSFX" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+
+[node name="PuddleSFX" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+
+[node name="CrashSFX" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
