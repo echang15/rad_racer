@@ -10,3 +10,7 @@ res://scripts/Puddle.gd
 res://scenes/UI.tscn
 res://scenes/StartScreen.tscn
 res://scenes/HighScores.tscn
+res://assets/shaders/retro_road.gdshader
+res://scripts/HighScores.gd
+res://scripts/ScoreManager.gd
+res://scripts/StartScreen.gd

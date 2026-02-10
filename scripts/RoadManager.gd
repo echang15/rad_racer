@@ -99,12 +99,6 @@ func _process(delta: float) -> void:
 			if background_rect:
 				background_rect.texture = sky_textures[current_stage_index]
 		
-		# Check for Stage Transition
-		var new_stage_index = int(distance / stage_distance_threshold) % sky_textures.size()
-		if new_stage_index != current_stage_index:
-			current_stage_index = new_stage_index
-			if background_rect:
-				background_rect.texture = sky_textures[current_stage_index]
 		
 		# Passing logic is handled in EnemyCar.gd
 				

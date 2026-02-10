@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://ciaxu01dqe8io"]
+
+[ext_resource type="Script" uid="uid://dsa2oyi7x7kw5" path="res://scripts/UI.gd" id="1_ui"]
+
+[node name="UI" type="CanvasLayer" unique_id=2061565689 node_paths=PackedStringArray("score_label", "cars_label", "game_over_label", "restart_button", "background_dim", "name_entry_panel", "name_input", "turbo_label", "turbo_bar")]
+process_mode = 3
+script = ExtResource("1_ui")
+score_label = NodePath("ScoreLabel")
+cars_label = NodePath("CarsLabel")
+game_over_label = NodePath("GameOverLabel")
+restart_button = NodePath("RestartButton")
+background_dim = NodePath("ColorRect")
+name_entry_panel = NodePath("NameEntryPanel")
+name_input = NodePath("NameEntryPanel/NameInput")
+turbo_label = NodePath("TurboLabel")
+turbo_bar = NodePath("TurboBar")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=405423849]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.705882)
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1533697737]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -26.0
+offset_right = 46.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "GAME OVER"
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=937195373]
+anchors_preset = -1
+anchor_left = 0.05
+anchor_right = 0.45
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 0.0
+offset_bottom = 60.0
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "SCORE: 0"
+
+
+
+[node name="CarsLabel" type="Label" parent="." unique_id=1431547729]
+anchors_preset = -1
+anchor_left = 0.55
+anchor_right = 0.95
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 0.0
+offset_bottom = 60.0
+grow_horizontal = 2
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "CARS: 0"
+
+[node name="RestartButton" type="Button" parent="." unique_id=609775312]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -180.0
+offset_right = 33.0
+offset_bottom = -149.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "RESTART"
+
+[node name="NameEntryPanel" type="Panel" parent="." unique_id=74829103]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -80.0
+offset_right = 150.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="NameEntryPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 10.0
+offset_right = 100.0
+offset_bottom = 36.0
+grow_horizontal = 2
+text = "NEW HIGH SCORE!"
+horizontal_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="NameEntryPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -15.0
+offset_right = 50.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "AAA"
+alignment = 1
+max_length = 3
+
+[node name="SubmitButton" type="Button" parent="NameEntryPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "SUBMIT"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NameEntryPanel/SubmitButton" to="." method="_on_submit_pressed"]
+
+[node name="TurboLabel" type="Label" parent="." unique_id=982374123]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1) # Red when empty/cooldown, Green when ready
+theme_override_font_sizes/font_size = 24
+text = "TURBO"
+horizontal_alignment = 1
+
+[node name="TurboBar" type="ProgressBar" parent="." unique_id=128374612]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -30.0
+offset_right = 100.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 1.0
+show_percentage = false
